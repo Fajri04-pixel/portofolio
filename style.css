@@ -439,35 +439,6 @@ nav {
     box-shadow: 0 20px 60px rgba(0,0,0,0.12);
 }
 
-.project-img {
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 3rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.project-img::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-    transform: rotate(45deg);
-    transition: all 0.5s;
-}
-
-.project-card:hover .project-img::before {
-    left: 100%;
-}
-
 .project-content {
     padding: 1.5rem;
 }
@@ -496,6 +467,95 @@ nav {
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 500;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.btn-primary {
+    background: #2c3e50;
+    color: white;
+    margin-right: 1rem;
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.home-actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Certificates Section */
+#certificates {
+    padding: 100px 5%;
+    background: white;
+}
+
+.certificate-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.certificate-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+.certificate-card img.certificate-img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.certificate-card h3 {
+    margin-bottom: 0.8rem;
+    color: #2c3e50;
+}
+
+.certificate-card p {
+    color: #575757;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.certificate-org {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    background: #2c3e50;
+    color: white;
+    border-radius: 999px;
+    font-size: 0.85rem;
 }
 
 /* Footer */
@@ -543,7 +603,215 @@ footer p {
     transform: translateY(-3px);
 }
 
-/* Responsive */
+/* Projects Section - Photos */
+.project-img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background: #f0f0f0;
+}
+
+.project-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-photo {
+    transform: scale(1.1);
+}
+
+.project-img-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-img-container::after {
+    opacity: 1;
+}
+
+/* ================================================
+   CONTACT SECTION — NEW
+   ================================================ */
+
+#contact {
+    padding: 100px 5%;
+    background: #f8f9fa;
+}
+
+.contact-note {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.contact-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Left: CTA card */
+.contact-cta {
+    background: #2c3e50;
+    border-radius: 18px;
+    padding: 2.5rem 2rem;
+    color: white;
+    position: sticky;
+    top: 100px;
+}
+
+.contact-cta-label {
+    font-size: 0.75rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: .75rem;
+}
+
+.contact-cta-heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.contact-cta-sub {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.contact-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.08);
+    padding: .5rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.contact-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(34,197,94,0.25);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(34,197,94,0.25); }
+    50%       { box-shadow: 0 0 0 6px rgba(34,197,94,0.1); }
+}
+
+/* Right: contact list */
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.contact-item {
+    background: #ffffff;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+}
+
+.contact-item:hover {
+    background: #f5f5f3;
+}
+
+.contact-item:hover .contact-item-arrow {
+    opacity: 1;
+    transform: translate(3px, -3px);
+}
+
+.contact-item-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #f5f5f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    color: #2c3e50;
+    transition: background 0.15s;
+}
+
+.contact-item:hover .contact-item-icon {
+    background: #eaeae8;
+}
+
+.contact-item-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contact-item-platform {
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #aaa;
+    font-weight: 500;
+}
+
+.contact-item-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2c3e50;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-item-arrow {
+    font-size: 1rem;
+    color: #ccc;
+    opacity: 0;
+    flex-shrink: 0;
+    transition: opacity 0.15s, transform 0.15s;
+}
+
+/* ================================================
+   RESPONSIVE
+   ================================================ */
+
 @media (max-width: 768px) {
     .nav-links {
         gap: 1rem;
@@ -583,48 +851,14 @@ footer p {
     .projects-grid {
         grid-template-columns: 1fr;
     }
-}
 
-/* Projects Section - Updated for Photos */
-.project-img-container {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-    background: #f0f0f0;
-}
+    /* Contact responsive */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 
-.project-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    .contact-cta {
+        position: static;
+    }
 }
-
-.project-card:hover .project-photo {
-    transform: scale(1.1);
-}
-
-/* Overlay effect on hover */
-.project-img-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-img-container::after {
-    opacity: 1;
-}
-
-/* Hapus atau comment style lama .project-img jika ada */
-/*
-.project-img {
-    ... style lama dihapus ...
-}
-*/

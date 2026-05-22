@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio - Developer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,8 +16,10 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#profile">Profile</a></li>
             <li><a href="#education">Pendidikan</a></li>
+            <li><a href="#certificates">Sertifikat</a></li>
             <li><a href="#tools">Tools</a></li>
             <li><a href="#projects">Proyek</a></li>
+            <li><a href="#contact">Kontak</a></li>
         </ul>
     </nav>
 
@@ -28,6 +31,10 @@
             </div>
             <h1 class="typing-text" id="typing"></h1><span class="cursor"></span>
             <p class="name">Muhamad Fajri</p>
+            <div class="home-actions">
+                <a href="img/cv fajri.png" class="btn btn-primary" download>Unduh CV</a>
+                <a href="#contact" class="btn btn-secondary">Kontak Saya</a>
+            </div>
         </div>
     </section>
 
@@ -75,6 +82,25 @@
         </div>
     </section>
 
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <h2 class="section-title">Sertifikat</h2>
+        <div class="certificate-grid">
+            <div class="certificate-card">
+                <img src="img/dicoding-1.png" alt="Sertifikat Web Development" class="certificate-img">
+            </div>
+            <div class="certificate-card">
+                <img src="img/dicoding-2.png" alt="Sertifikat Laravel Framework" class="certificate-img">
+            </div>
+            <div class="certificate-card">
+                <img src="img/myskil.png" alt="Sertifikat Responsive Design" class="certificate-img">
+            </div>
+            <div class="certificate-card">
+                <img src="img/komdigi.png" alt="Sertifikat Git & Version Control" class="certificate-img">
+            </div>
+        </div>
+    </section>
+
     <!-- Tools Section -->
     <section id="tools">
         <h2 class="section-title">Tools & Technologies</h2>
@@ -115,44 +141,100 @@
     </section>
 
     <!-- Projects Section -->
-<section id="projects">
-    <h2 class="section-title">Proyek Saya</h2>
-    <div class="projects-grid">
-        <div class="project-card">
-            <div class="project-img-container">
-                <img src="img/Screenshot 2026-01-20 083702.png" alt="Sistem Manajemen Sekolah" class="project-photo">
+    <section id="projects">
+        <h2 class="section-title">Proyek Saya</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="img/Screenshot 2026-01-20 083702.png" alt="Sistem Manajemen Sekolah" class="project-photo">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Sistem Pemesanan Tiket Camp</h3>
+                    <p class="project-desc">Aplikasi web untuk mengelola data yang naik gunung.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                </div>
             </div>
-            <div class="project-content">
-                <h3 class="project-title">Sistem Pemesanan Tiket</h3>
-                <p class="project-desc">Aplikasi web untuk mengelola data yang naik gunung.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">PHP</span>
-                    <span class="tech-tag">Laravel</span>
-                    <span class="tech-tag">MySQL</span>
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="img/Screenshot 2026-04-05 155648.png" alt="E-Commerce" class="project-photo">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Ghibli</h3>
+                    <p class="project-desc">Aplikasi web supaya tau pemain film nya dan judul film nya.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="project-card">
-            <div class="project-img-container">
-                <img src="img/Screenshot 2026-04-05 155648.png" alt="E-Commerce" class="project-photo">
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">Ghibli</h3>
-                <p class="project-desc">Aplikasi web supaya tau pemain film nya dan judul fim nya
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                </div>
+    </section>
+
+    <!-- Contact Section (UPDATED) -->
+    <section id="contact">
+        <h2 class="section-title">Kontak Saya</h2>
+        <p class="contact-note">Terbuka untuk proyek freelance, kerja sama, maupun sekadar ngobrol seputar teknologi dan web.</p>
+
+        <div class="contact-wrapper">
+            <!-- Right: Contact list -->
+            <div class="contact-list">
+
+                <a class="contact-item" href="https://wa.me/6283869933917" target="_blank" rel="noreferrer">
+                    <div class="contact-item-icon">
+                        <i class="ti ti-brand-whatsapp"></i>
+                    </div>
+                    <div class="contact-item-info">
+                        <span class="contact-item-platform">WhatsApp</span>
+                        <span class="contact-item-value">+62 83869933917</span>
+                    </div>
+                    <i class="ti ti-arrow-up-right contact-item-arrow"></i>
+                </a>
+
+                <a class="contact-item" href="mailto:fajri@email.com">
+                    <div class="contact-item-icon">
+                        <i class="ti ti-mail"></i>
+                    </div>
+                    <div class="contact-item-info">
+                        <span class="contact-item-platform">Email</span>
+                        <span class="contact-item-value">muhamadfajrii3030@email.com</span>
+                    </div>
+                    <i class="ti ti-arrow-up-right contact-item-arrow"></i>
+                </a>
+
+                <a class="contact-item" href="https://www.linkedin.com/in/muhamad-fajri-838b773a9/" target="_blank" rel="noreferrer">
+                    <div class="contact-item-icon">
+                        <i class="ti ti-brand-linkedin"></i>
+                    </div>
+                    <div class="contact-item-info">
+                        <span class="contact-item-platform">LinkedIn</span>
+                        <span class="contact-item-value">Muhamad Fajri</span>
+                    </div>
+                    <i class="ti ti-arrow-up-right contact-item-arrow"></i>
+                </a>
+
+                <a class="contact-item" href="https://www.tiktok.com/@mhmdfajriiiiiiiii" target="_blank" rel="noreferrer">
+                    <div class="contact-item-icon">
+                        <i class="ti ti-brand-tiktok"></i>
+                    </div>
+                    <div class="contact-item-info">
+                        <span class="contact-item-platform">TikTok</span>
+                        <span class="contact-item-value">@muhamadfajriiiiiiiii</span>
+                    </div>
+                    <i class="ti ti-arrow-up-right contact-item-arrow"></i>
+                </a>
+
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; Fajri</p>
+        <p>&copy; Muhamad Fajri</p>
     </footer>
 
     <!-- Scroll to Top Button -->
